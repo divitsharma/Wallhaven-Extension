@@ -7,4 +7,5 @@
     right: 0;
     margin: auto;
     z-index: 200;
+    pointer-events: none;
 }
