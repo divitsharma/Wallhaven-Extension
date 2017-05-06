@@ -1,0 +1,30 @@
+{
+  "manifest_version": 2,
+  "name": "Wallhaven desktop preview",
+  "version": "1.0",
+
+  "description": "Displays a preview of your desktop on top of the wallpaper image",
+
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_title": "Desktop Preview",
+    "default_popup":  "popup.html"
+  },
+
+  "permissions": [
+    "activeTab",
+    "tabs",
+    "http://*/*", "https://*/*"
+  ],
+
+  "content_scripts": [
+    {
+      "css": [ "styles.css" ],
+      "js": [ "overlayimage.js" ],
+      "matches": [ "https://alpha.wallhaven.cc/wallpaper/*" ]
+    }
+  ],
+  "web_accessible_resources": [
+    "images/trans_desktop.png"
+  ]
+}
